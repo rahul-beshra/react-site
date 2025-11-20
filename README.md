@@ -74,27 +74,29 @@ The focus is on:
 
 **Sections**
 
-- `Hero`  
-- `Features`  
-- `ProjectsPreview`  
-- `Testimonials`  
-- `CTA`  
-- `ContactSection`  
+- `Hero` – Landing hero with primary CTAs  
+- `Features` – Highlight main product features  
+- `ProjectsPreview` – Spotlight projects on the home page  
+- `Testimonials` – Social proof / feedback section  
+- `CTA` – Call-to-action strip  
+- `ContactSection` – Contact form UI (front-end only, ready for your backend)
 
 ### 🧱 Architecture & Code
 
 - React functional components with hooks  
-- **React Router** for routing  
+- **React Router** for client-side routing  
 - Theme managed via **React Context**  
-- Reusable UI primitives  
-- Static data modules for content  
+- Reusable UI primitives:
+  - Buttons, Cards, Containers, Inputs, Textareas, Badges, Pills, etc.  
+- Static data modules for:
+  - Projects, blog posts, testimonials, navigation, timeline  
 
 ---
 
 ## Tech Stack
 
 - **React 18**  
-- **Vite**  
+- **Vite** (dev server & build tool)  
 - **Tailwind CSS**  
 - **React Router v6**  
 - **PostCSS + Autoprefixer**  
@@ -103,6 +105,7 @@ The focus is on:
 
 ## Project Structure
 
+```bash
 react-site/
 ├── index.html
 ├── package.json
@@ -117,12 +120,51 @@ react-site/
     ├── main.jsx
     ├── router.jsx
     ├── index.css
+    │
     ├── context/
+    │   └── ThemeContext.jsx
+    │
     ├── hooks/
+    │   └── useScrollToHash.js
+    │
     ├── data/
+    │   ├── navLinks.js
+    │   ├── projects.js
+    │   ├── blogPosts.js
+    │   ├── testimonials.js
+    │   └── timeline.js
+    │
     ├── layout/
+    │   ├── Navbar.jsx
+    │   ├── MobileNav.jsx
+    │   ├── Footer.jsx
+    │   └── ThemeToggle.jsx
+    │
     ├── components/
+    │   ├── ui/
+    │   │   ├── Button.jsx
+    │   │   ├── Card.jsx
+    │   │   ├── Container.jsx
+    │   │   ├── SectionHeader.jsx
+    │   │   ├── Input.jsx
+    │   │   ├── Textarea.jsx
+    │   │   ├── Badge.jsx
+    │   │   └── Pill.jsx
+    │   │
+    │   └── sections/
+    │       ├── Hero.jsx
+    │       ├── Features.jsx
+    │       ├── ProjectsPreview.jsx
+    │       ├── Testimonials.jsx
+    │       ├── CTA.jsx
+    │       └── ContactSection.jsx
+    │
     └── pages/
+        ├── Home.jsx
+        ├── Projects.jsx
+        ├── Blog.jsx
+        └── About.jsx
+```
 
 ---
 
